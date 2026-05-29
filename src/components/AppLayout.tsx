@@ -9,6 +9,8 @@ import HistorySection from './HistorySection';
 import StatsSection from './StatsSection';
 import WidgetSection from './WidgetSection';
 import CTASection from './CTASection';
+import BrowserIntegrationSection from './BrowserIntegrationSection';
+import PricingSection from './PricingSection';
 import Footer from './Footer';
 import UploadScanner from './UploadScanner';
 import SettingsPanel from './SettingsPanel';
@@ -47,6 +49,8 @@ const AppLayout: React.FC = () => {
             <HeroSection />
             <FeaturesSection />
             <HowItWorksSection />
+            <BrowserIntegrationSection />
+            <PricingSection />
             <CTASection />
           </>
         );
