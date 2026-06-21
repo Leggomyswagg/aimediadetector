@@ -82,7 +82,7 @@ const FeaturesSection: React.FC = () => {
           Everything You Need to Stay Protected
         </h2>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Our comprehensive AI detection platform provides real-time protection across all your devices and platforms.
+          Lucid gives you real-time clarity on every piece of media — across all your devices and platforms.
         </p>
       </div>
 
@@ -103,7 +103,6 @@ const FeaturesSection: React.FC = () => {
         ))}
       </div>
 
-      {/* Supported Platforms */}
       <div className="mt-16 text-center">
         <p className="text-xs text-gray-500 uppercase tracking-wider mb-6">Detects AI content across all major platforms</p>
         <div className="flex flex-wrap justify-center gap-4">

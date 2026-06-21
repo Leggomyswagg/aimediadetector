@@ -41,13 +41,11 @@ const FloatingWidget: React.FC = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 w-72 sm:w-80">
-      {/* Main Widget */}
       <div className="bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden">
-        {/* Header */}
         <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-gray-800 to-gray-900 border-b border-gray-700/50">
           <div className="flex items-center gap-2">
             <Shield className="w-5 h-5 text-cyan-400" />
-            <span className="text-sm font-bold text-white">AI Detect</span>
+            <span className="text-sm font-bold text-white">Lucid</span>
             <span className={`w-2 h-2 rounded-full ${isScanning ? 'bg-green-500 animate-pulse' : 'bg-gray-600'}`} />
           </div>
           <div className="flex items-center gap-1">
@@ -66,7 +64,6 @@ const FloatingWidget: React.FC = () => {
           </div>
         </div>
 
-        {/* Status Bar */}
         <div className="px-4 py-2.5 flex items-center justify-between border-b border-gray-800/50">
           <div className="flex items-center gap-2">
             <ScanLine className={`w-4 h-4 ${isScanning ? 'text-cyan-400 animate-pulse' : 'text-gray-500'}`} />
@@ -80,7 +77,6 @@ const FloatingWidget: React.FC = () => {
           </div>
         </div>
 
-        {/* Recent Alerts */}
         {expanded && (
           <div className="max-h-48 overflow-y-auto">
             {recentDetections.length === 0 ? (
@@ -110,7 +106,6 @@ const FloatingWidget: React.FC = () => {
           </div>
         )}
 
-        {/* Scanning animation bar */}
         {isScanning && (
           <div className="h-0.5 bg-gray-800 overflow-hidden">
             <div className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 animate-pulse w-full" />
