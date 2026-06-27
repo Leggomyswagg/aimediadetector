@@ -14,10 +14,10 @@ const WidgetSection: React.FC = () => {
   const [showAlerts, setShowAlerts] = useState(true);
   const [autoScan, setAutoScan] = useState(true);
 
-  const embedCode = `<!-- AI Detect Media Shield Widget -->
-<script src="https://cdn.aidetect.io/widget/v3.js"></script>
+  const embedCode = `<!-- Lucid Widget -->
+<script src="https://cdn.lucid.io/widget/v3.js"></script>
 <script>
-  AIDetect.init({
+  Lucid.init({
     apiKey: 'your-api-key-here',
     position: '${widgetPosition}',
     theme: '${widgetTheme}',
@@ -53,7 +53,7 @@ const WidgetSection: React.FC = () => {
             <Code2 className="w-7 h-7 text-cyan-400" />
             Embeddable Widget
           </h2>
-          <p className="text-gray-400 text-sm mt-1">Add AI detection to any website with a single code snippet</p>
+          <p className="text-gray-400 text-sm mt-1">Add Lucid detection to any website with a single code snippet</p>
         </div>
       </div>
 
@@ -249,7 +249,7 @@ const WidgetSection: React.FC = () => {
                     } border-b`}>
                       <Shield className={`w-4 h-4 ${widgetTheme === 'light' ? 'text-cyan-600' : 'text-cyan-400'}`} />
                       <span className={`text-xs font-semibold ${widgetTheme === 'light' ? 'text-gray-800' : 'text-white'}`}>
-                        AI Detect
+                        Lucid
                       </span>
                       <span className="ml-auto w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                     </div>
