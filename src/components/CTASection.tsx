@@ -8,7 +8,6 @@ const CTASection: React.FC = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-500/10 via-blue-600/10 to-purple-600/10 border border-cyan-500/20 p-8 sm:p-12 lg:p-16">
-        {/* Background effects */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
 
@@ -27,7 +26,7 @@ const CTASection: React.FC = () => {
           </h2>
 
           <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto">
-            Join thousands of users who trust AI Detect to verify the authenticity of media content they encounter online.
+            Join thousands of users who trust Lucid to verify the authenticity of media they encounter online.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">

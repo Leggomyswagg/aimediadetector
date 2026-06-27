@@ -31,7 +31,6 @@ const DetectionDetail: React.FC = () => {
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={() => setSelectedDetection(null)}>
       <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl" onClick={e => e.stopPropagation()}>
-        {/* Header */}
         <div className="relative">
           {d.thumbnail_url && (
             <div className="h-48 overflow-hidden rounded-t-2xl">
@@ -48,7 +47,6 @@ const DetectionDetail: React.FC = () => {
         </div>
 
         <div className="p-6 space-y-6">
-          {/* Title & Status */}
           <div className="flex items-start justify-between gap-4">
             <div>
               <h2 className="text-xl font-bold text-white">{d.title}</h2>
@@ -60,7 +58,6 @@ const DetectionDetail: React.FC = () => {
             </div>
           </div>
 
-          {/* Confidence Meter */}
           <div className={`p-5 rounded-xl ${colors.bgLight} border ${colors.border}`}>
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-3">
@@ -91,7 +88,6 @@ const DetectionDetail: React.FC = () => {
             </div>
           </div>
 
-          {/* Analysis Summary */}
           {d.detection_details?.analysis_summary && (
             <div className="p-4 rounded-xl bg-gray-800/50 border border-gray-700/50">
               <h3 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
@@ -102,7 +98,6 @@ const DetectionDetail: React.FC = () => {
             </div>
           )}
 
-          {/* Artifacts */}
           {d.detection_details?.artifacts && d.detection_details.artifacts.length > 0 && (
             <div>
               <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
@@ -122,7 +117,6 @@ const DetectionDetail: React.FC = () => {
             </div>
           )}
 
-          {/* Metadata Flags */}
           {d.detection_details?.metadata_flags && d.detection_details.metadata_flags.length > 0 && (
             <div>
               <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
@@ -139,11 +133,10 @@ const DetectionDetail: React.FC = () => {
             </div>
           )}
 
-          {/* Actions */}
           <div className="flex gap-3 pt-2">
             <button
               onClick={() => {
-                const report = `AI Detection Report\n${'='.repeat(40)}\nTitle: ${d.title}\nMedia Type: ${d.media_type}\nSource: ${d.source_platform}\nAI Confidence: ${d.ai_confidence}%\nModel: ${d.ai_model_detected}\nVerdict: ${d.is_ai_generated ? 'AI Generated' : 'Authentic'}\nArtifacts: ${d.detection_details?.artifacts?.join(', ') || 'None'}\nMetadata: ${d.detection_details?.metadata_flags?.join(', ') || 'None'}`;
+                const report = `Lucid Detection Report\n${'='.repeat(40)}\nTitle: ${d.title}\nMedia Type: ${d.media_type}\nSource: ${d.source_platform}\nAI Confidence: ${d.ai_confidence}%\nModel: ${d.ai_model_detected}\nVerdict: ${d.is_ai_generated ? 'AI Generated' : 'Authentic'}\nArtifacts: ${d.detection_details?.artifacts?.join(', ') || 'None'}\nMetadata: ${d.detection_details?.metadata_flags?.join(', ') || 'None'}`;
                 const blob = new Blob([report], { type: 'text/plain' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');

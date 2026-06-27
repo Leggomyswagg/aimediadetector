@@ -39,14 +39,12 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-950 border-t border-gray-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer */}
         <div className="py-12 grid grid-cols-2 md:grid-cols-5 gap-8">
-          {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Shield className="w-7 h-7 text-cyan-400" />
               <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                AI Detect
+                Lucid
               </span>
             </div>
             <p className="text-sm text-gray-500 mb-4 leading-relaxed">
@@ -70,7 +68,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h4 className="text-sm font-semibold text-white mb-4">{category}</h4>
@@ -90,10 +87,9 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        {/* Bottom Bar */}
         <div className="py-6 border-t border-gray-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-600">
-            &copy; {new Date().getFullYear()} AI Detect Media Shield. All rights reserved.
+            &copy; {new Date().getFullYear()} Lucid. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-gray-600">
             <button className="hover:text-gray-400 transition-colors">Terms of Service</button>

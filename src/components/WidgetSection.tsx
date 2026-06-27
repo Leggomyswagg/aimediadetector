@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDetection } from '@/contexts/DetectionContext';
 import {
   Code2, Copy, Check, Settings, Eye, Palette, Layout,
-  Monitor, Smartphone, Globe, Shield, ChevronDown
+  Monitor, Smartphone, Globe, Shield, ChevronDown, Lock, Crown, ArrowRight
 } from 'lucide-react';
 
 const WidgetSection: React.FC = () => {
@@ -159,26 +159,40 @@ const WidgetSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Embed Code */}
-          <div className="p-6 rounded-xl bg-gray-900/80 border border-gray-700/50">
-            <div className="flex items-center justify-between mb-4">
+          {/* Embed Code — Enterprise gated */}
+          <div className="rounded-xl bg-gray-900/80 border border-yellow-500/30 overflow-hidden">
+            {/* Header always visible */}
+            <div className="flex items-center justify-between p-6 pb-4">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2">
                 <Code2 className="w-4 h-4 text-cyan-400" />
                 Embed Code
               </h3>
-              <button
-                onClick={handleCopy}
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                  copied ? 'bg-green-500/20 text-green-400' : 'bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20'
-                }`}
-              >
-                {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                {copied ? 'Copied!' : 'Copy Code'}
-              </button>
+              <span className="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 font-medium">
+                <Crown className="w-3 h-3" />
+                Enterprise
+              </span>
             </div>
-            <pre className="p-4 rounded-lg bg-gray-950 border border-gray-800 overflow-x-auto text-xs text-gray-300 font-mono leading-relaxed">
-              {embedCode}
-            </pre>
+
+            {/* Blurred code + lock overlay */}
+            <div className="relative px-6 pb-6">
+              <pre className="p-4 rounded-lg bg-gray-950 border border-gray-800 overflow-x-auto text-xs text-gray-300 font-mono leading-relaxed select-none blur-sm pointer-events-none">
+                {embedCode}
+              </pre>
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-900/70 backdrop-blur-[1px] rounded-lg mx-6">
+                <div className="w-12 h-12 rounded-2xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center mb-3">
+                  <Lock className="w-6 h-6 text-yellow-400" />
+                </div>
+                <p className="text-sm font-bold text-white mb-1">Enterprise Plan Required</p>
+                <p className="text-xs text-gray-400 text-center mb-4 max-w-[200px]">
+                  Unlock the embed code and deploy to unlimited websites
+                </p>
+                <button className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-xl text-sm font-bold hover:shadow-lg hover:shadow-yellow-500/25 transition-all">
+                  <Crown className="w-4 h-4" />
+                  Upgrade to Enterprise
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
