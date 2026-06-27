@@ -17,7 +17,7 @@ const steps = [
   {
     icon: Pin,
     title: 'Pin It to Your Toolbar',
-    desc: 'Click the puzzle-piece icon in your browser toolbar, find AI Detect, and click the pin icon.',
+    desc: 'Click the puzzle-piece icon in your browser toolbar, find Lucid, and click the pin icon.',
   },
   {
     icon: Globe,
@@ -119,13 +119,13 @@ const BrowserIntegrationSection: React.FC = () => {
             </div>
             <p className="text-xs text-gray-400 mb-3">Drag the button below to your bookmarks bar. Click it on any page to scan instantly.</p>
             <a
-              href="javascript:void((function(){var s=document.createElement('script');s.src='https://cdn.aidetect.io/bookmarklet.js';document.head.appendChild(s);})())"
+              href="javascript:void((function(){var s=document.createElement('script');s.src='https://cdn.lucid.io/bookmarklet.js';document.head.appendChild(s);})())"
               draggable
               onClick={e => e.preventDefault()}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium hover:bg-purple-500/20 transition-colors cursor-grab active:cursor-grabbing"
             >
               <Shield className="w-3.5 h-3.5" />
-              AI Detect ↗
+              Lucid ↗
             </a>
           </div>
 

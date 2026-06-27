@@ -26,7 +26,7 @@ const AppLayout: React.FC = () => {
       <div className="min-h-screen bg-gray-950 flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="w-10 h-10 text-cyan-400 animate-spin mx-auto mb-4" />
-          <p className="text-gray-400 text-sm">Loading AI Detect...</p>
+          <p className="text-gray-400 text-sm">Loading Lucid...</p>
         </div>
       </div>
     );
